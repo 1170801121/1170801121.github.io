@@ -114,9 +114,9 @@ In order to eliminate the influence of the instability of the T calculation resu
 
 Based on the above model, **we also introduce "jump-queue  coefficient" $a$ as a measure to give certain priority to some short-distance taxi drivers who return again, ensuring that the  "net income per unit time" of short-distance taxi drivers is equal to  the "net income per unit time" of non short-distance taxi drivers**, so as to make the income of these taxis as balanced as possible. 
 
-Therefore, the queue jumping coefficient is determined by the mileage of short  distance passengers $X'$, the current number of taxi queuing $L$, the  current number of passengers waiting for boarding $p0$, and the time when  the driver goes to the queue $T$. In the end, **we bring in a group of conventional data, and fit the  relationship between jump-queue  coefficient $a$ and short distance passenger mileage $X'$. The fitting curve shows good performance and the rationality of  the model. **
+Therefore, the queue jumping coefficient is determined by the mileage of short  distance passengers $X'$, the current number of taxi queuing $L$, the  current number of passengers waiting for boarding $p0$, and the time when  the driver goes to the queue $T$. In the end, **we bring in a group of conventional data, and fit the  relationship between jump-queue  coefficient $a$ and short distance passenger mileage \\(X'\\). The fitting curve shows good performance and the rationality of  the model. **
 <center>
-<img src="{{site.baseurl}}/assets/img/fitting4.png"  /><br>
+<img src="{{site.baseurl}}/assets/img/fitting4.png "   width="55%" height="55%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
