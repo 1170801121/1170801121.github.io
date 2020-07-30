@@ -104,9 +104,25 @@ The following pictures are some screenshot from our appliction to present severa
 </center>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/Course details interface.png "  /><br>
+<img src="{{site.baseurl}}/assets/img/Recording function module.JPG "  /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
-    padding: 2px;">Course details interface</div>
+    padding: 2px;">Recording function module</div>
+</center>
+
+<center>
+<img src="{{site.baseurl}}/assets/img/Teacher intelligent terminal control interface.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Teacher intelligent terminal control interface</div>
+</center>
+
+<center>
+<img src="{{site.baseurl}}/assets/img/Login interface of teacher terminal.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Login interface of teacher terminal</div>
 </center>
