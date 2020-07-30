@@ -24,12 +24,12 @@ By analyzing and studying the influencing mechanism of factors related to taxi d
 
 By selecting **Shanghai Pudong International Airport and its taxis** as the  research objects, we use **Python crawler to collect in-depth relevant  information of Shanghai Pudong International Airport**, such as flight  information table, population density map of Shanghai, taxi pricing  formula of Shanghai, etc., give the taxi driver selection scheme of the  airport, and analyze the rationality of the model and the relevant  factors Element dependence. According to the population density map of Shanghai, we creatively  **establish the relationship model between the population density and the  probability density of taxi mileage, which makes the data closer to the  reality**. When analyzing the dependence of the model, we take a series of proper  passenger 𝑝0 values which are waiting to get on the train at present,  and then draw the decision scatter diagram under each 𝑝0 value, different arrival time t and the number of waiting taxis L. **Based on these scatter diagrams, we analyze the dependence of the model on the relevant input and the rationality of the model**. 
 
-<width = 30% height = 30% div align=center>![Our team]({{site.baseurl}}/assets/img/pydata1.png)  information of Shanghai Pudong International Airport collected by Python crawler </div>
+<div align=center>![Our team]({{site.baseurl}}/assets/img/pydata1.png)  information of Shanghai Pudong International Airport collected by Python crawler </div>
 
-<width = 30% height = 30% div align=center>![Our team]({{site.baseurl}}/assets/img/shanghai.png) information of Shanghai Pudong International Airport collected by Python crawler </div>
+<div align=center>![Our team]({{site.baseurl}}/assets/img/shanghai.png) {:height="50%" width="50%"} information of Shanghai Pudong International Airport collected by Python crawler </div>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/sdot.png" width="25%" height="25%" />
+<img src="{{site.baseurl}}/assets/img/sdot.png" width="55%" height="55%" />
 Figure 1. Lena
 </center>
 <div align=center>![Our team]({{site.baseurl}}/assets/img/sdot.png){:height="50%" width="50%"}
