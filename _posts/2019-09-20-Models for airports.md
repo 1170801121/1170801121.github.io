@@ -29,7 +29,7 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 <width = 30% height = 30% div align=center>![Our team]({{site.baseurl}}/assets/img/shanghai.png) information of Shanghai Pudong International Airport collected by Python crawler </div>
 
 <center>
-<img src={{site.baseurl}}/assets/img/sdot.png width="25%" height="25%" />
+<img src="{{site.baseurl}}/assets/img/sdot.png" width="25%" height="25%" />
 Figure 1. Lena
 </center>
 <div align=center>![Our team]({{site.baseurl}}/assets/img/sdot.png)
