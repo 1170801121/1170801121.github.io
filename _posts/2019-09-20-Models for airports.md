@@ -25,7 +25,7 @@ By analyzing and studying the influencing mechanism of factors related to taxi d
 By selecting **Shanghai Pudong International Airport and its taxis** as the  research objects, we use **Python crawler to collect in-depth relevant  information of Shanghai Pudong International Airport**, such as flight  information table, population density map of Shanghai, taxi pricing  formula of Shanghai, etc., give the taxi driver selection scheme of the  airport, and analyze the rationality of the model and the relevant  factors Element dependence. According to the population density map of Shanghai, we creatively  **establish the relationship model between the population density and the  probability density of taxi mileage, which makes the data closer to the  reality**. When analyzing the dependence of the model, we take a series of proper  passenger 𝑝0 values which are waiting to get on the train at present,  and then draw the decision scatter diagram under each 𝑝0 value, different arrival time t and the number of waiting taxis L. **Based on these scatter diagrams, we analyze the dependence of the model on the relevant input and the rationality of the model**. 
 
 <center>
-![Our team]({{site.baseurl}}/assets/img/pydata1.png)  
+<img src="{{site.baseurl}}/assets/img/pydata1.png" width="55%" height="55%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -33,7 +33,7 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 </center>
 
 <center>
-![Our team]({{site.baseurl}}/assets/img/shanghai.png) {:height="50%" width="50%"} 
+<img src="{{site.baseurl}}/assets/img/shanghai.png" width="55%" height="55%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -41,7 +41,7 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 </center>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/sdot.png" width="55%" height="55%" />
+<img src="{{site.baseurl}}/assets/img/sdot.png" width="55%" height="55%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -54,6 +54,16 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 By establishing a mathematical model that considers factors such as safety, ride efficiency, management cost and uncertainty of passengers' boarding time in real situation, **we help the management department to simulate how to set "boarding point" and arrange taxis and passengers reasonably**, so that the total ride efficiency is the highest under the condition of ensuring the safety of vehicles and passengers
 
 First of all, we consider how to ensure the safety of vehicles and passengers. After analysis and demonstration, according to a rule, **we first get a scheme of taxi entry and exit**, and in the scheme, we can properly arrange the time for passengers to get on the bus, so that the safety of passengers can be guaranteed, and the waiting time of passengers can be reduced as soon as possible, and the service comfort of passengers can be improved.
+
+<center>
+<img src="{{site.baseurl}}/assets/img/442.JPG" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/443.JPG" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/444.JPG" width="55%" height="55%" /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">a scheme of taxi entry and exit</div>
+</center>
 
 <div align=center>![Our team]({{site.baseurl}}/assets/img/442.JPG)
 
