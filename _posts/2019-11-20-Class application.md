@@ -30,9 +30,22 @@ Besides, we have developed a **convenient key and difficult mark button**, which
 Through the use of our project, students can use the intelligent terminal to **conduct a comprehensive review of the course after class**. Students can **view the classroom review with courseware as the carrier**. On each page of the courseware, the corresponding recording, blackboard writing and discussion of the corresponding page are displayed. Students can **view the statistical information** of the key and difficult points, the keyword map generated for the class content, etc.
 
 The **processing logic flow chart** of our project is as follows.
-<div align=center>![Our team]({{site.baseurl}}/assets/img/logic_1.png)
+<center>
+<img src="{{site.baseurl}}/assets/img/logic_1.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">processing logic flow chart</div>
+</center>
+
 The **overall architecture design drawing** of our project is as follows.
-<div align=center>![Our team]({{site.baseurl}}/assets/img/logic_2.png)
+<center>
+<img src="{{site.baseurl}}/assets/img/logic_2.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">overall architecture design drawing</div>
+</center>
 ## Technical Overview
 
 
@@ -57,3 +70,43 @@ According to the alignment information between the sentences in speech transcrip
 As for the schedule extracting model, we started with **recognizers_date_time of Microsoft** to identify whether a text sentence contains a date, and then analyzes the **dependency syntactic relationship of the sentence by syntactic parsing**. According to the big data containing the schedule information, the **syntax rules are summarized to judge whether the text containing date is to arrange schedule**, so as to realize the schedule extraction.
 
 ## Project Presentation
+The following pictures are some screenshot from our appliction to present several functional interface.
+<center>
+<img src="{{site.baseurl}}/assets/img/User login module.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">User login module</div>
+</center>
+
+<center>
+<img src="{{site.baseurl}}/assets/img/Recording transcription and keyword extraction module.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Recording transcription and keyword extraction module</div>
+</center>
+
+<center>
+<img src="{{site.baseurl}}/assets/img/Course details interface.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Course details interface</div>
+</center>
+
+<center>
+<img src="{{site.baseurl}}/assets/img/Course query interface.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Course query interface</div>
+</center>
+
+<center>
+<img src="{{site.baseurl}}/assets/img/Course details interface.png "  /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Course details interface</div>
+</center>
