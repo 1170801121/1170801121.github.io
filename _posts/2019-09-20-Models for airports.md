@@ -29,7 +29,7 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
-    padding: 2px;">information of Shanghai Pudong International Airport collected by Python crawler</div>
+    padding: 2px;">information of Shanghai Pudong International Airport collected by Python crawler</div><br>
 </center>
 
 <center>
@@ -37,7 +37,7 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
-    padding: 2px;">population density map of Shanghai</div>
+    padding: 2px;">population density map of Shanghai</div><br>
 </center>
 
 <center>
@@ -45,7 +45,7 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
-    padding: 2px;">decision scatter diagram </div>
+    padding: 2px;">decision scatter diagram </div><br>
 </center>
 
 我们通过建立考虑了安全、乘车效率、管理成本以及现实状况下乘客上车时间的不确定性等影响因素的数学模型，帮助管理部门模拟决策如何设置“上车点”，并合理安排出租车和乘客，在保证车辆和乘客安全的条件下，使得总的乘车效率最高：
@@ -65,11 +65,6 @@ First of all, we consider how to ensure the safety of vehicles and passengers. A
     padding: 2px;">a scheme of taxi entry and exit</div>
 </center>
 
-<div align=center>![Our team]({{site.baseurl}}/assets/img/442.JPG)
-
-<div align=center>![Our team]({{site.baseurl}}/assets/img/443.JPG)
-
-<div align=center>![Our team]({{site.baseurl}}/assets/img/444.JPG)
 
 在此方案下，我们又探讨了泊车区可同时等待载客的出租车的数量对于单位时间驶出率的影响，且由于乘客上车时间的不稳定性也会影响单位时间驶出率。我们建立了一个数学模型，考虑了前述影响因素，算得了不同的泊车位数量所对应的单位时间驶出率，又综合考虑了管理成本等实际因素，得出了一个最优方案，这样使得司机的收益也会得到提高，同时管理部门所付出的成本也不会浪费太多。在本题中，我们考虑到了现实状况下不确定性所带来的影响，是一个亮点。
 最后还对于得到的最优方案的每个车位的负荷率及可行的调整方法进行了简单的讨论。
