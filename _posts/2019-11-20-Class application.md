@@ -30,9 +30,9 @@ Besides, we have developed a **convenient key and difficult mark button**, which
 Through the use of our project, students can use the intelligent terminal to **conduct a comprehensive review of the course after class**. Students can **view the classroom review with courseware as the carrier**. On each page of the courseware, the corresponding recording, blackboard writing and discussion of the corresponding page are displayed. Students can **view the statistical information** of the key and difficult points, the keyword map generated for the class content, etc.
 
 The **processing logic flow chart** of our project is as follows.
-![Our team]({{site.baseurl}}/assets/img/logic_1.png)
+<div align=center>![Our team]({{site.baseurl}}/assets/img/logic_1.png)
 The **overall architecture design drawing** of our project is as follows.
-![Our team]({{site.baseurl}}/assets/img/logic_2.png)
+<div align=center>![Our team]({{site.baseurl}}/assets/img/logic_2.png)
 ## Technical Overview
 
 
