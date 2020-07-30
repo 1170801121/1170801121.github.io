@@ -24,16 +24,30 @@ By analyzing and studying the influencing mechanism of factors related to taxi d
 
 By selecting **Shanghai Pudong International Airport and its taxis** as the  research objects, we use **Python crawler to collect in-depth relevant  information of Shanghai Pudong International Airport**, such as flight  information table, population density map of Shanghai, taxi pricing  formula of Shanghai, etc., give the taxi driver selection scheme of the  airport, and analyze the rationality of the model and the relevant  factors Element dependence. According to the population density map of Shanghai, we creatively  **establish the relationship model between the population density and the  probability density of taxi mileage, which makes the data closer to the  reality**. When analyzing the dependence of the model, we take a series of proper  passenger 𝑝0 values which are waiting to get on the train at present,  and then draw the decision scatter diagram under each 𝑝0 value, different arrival time t and the number of waiting taxis L. **Based on these scatter diagrams, we analyze the dependence of the model on the relevant input and the rationality of the model**. 
 
-<div align=center>![Our team]({{site.baseurl}}/assets/img/pydata1.png)  information of Shanghai Pudong International Airport collected by Python crawler </div>
+<center>
+![Our team]({{site.baseurl}}/assets/img/pydata1.png)  
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">information of Shanghai Pudong International Airport collected by Python crawler</div>
+</center>
 
-<div align=center>![Our team]({{site.baseurl}}/assets/img/shanghai.png) {:height="50%" width="50%"} information of Shanghai Pudong International Airport collected by Python crawler </div>
+<center>
+![Our team]({{site.baseurl}}/assets/img/shanghai.png) {:height="50%" width="50%"} 
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">population density map of Shanghai</div>
+</center>
 
 <center>
 <img src="{{site.baseurl}}/assets/img/sdot.png" width="55%" height="55%" />
-Figure 1. Lena
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">decision scatter diagram </div>
 </center>
-<div align=center>![Our team]({{site.baseurl}}/assets/img/sdot.png){:height="50%" width="50%"}
-<div align=center>![Our team]({{site.baseurl}}/assets/img/sdot.png)
+
 我们通过建立考虑了安全、乘车效率、管理成本以及现实状况下乘客上车时间的不确定性等影响因素的数学模型，帮助管理部门模拟决策如何设置“上车点”，并合理安排出租车和乘客，在保证车辆和乘客安全的条件下，使得总的乘车效率最高：
 我们首先考虑如何保证车辆和乘客安全，经过分析论证，按照一种规则，我们先得到了一种出租车驶入与驶出的方案，并且在方案中可以恰当地安排乘客上车的时机，使得既保证了乘客的安全，又能尽快地上车，减少乘客的等待时间，提高了乘客的服务舒适感。
 
