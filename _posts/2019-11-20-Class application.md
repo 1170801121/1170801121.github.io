@@ -88,7 +88,7 @@ The following pictures are some screenshot from our appliction to present severa
 </center>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/Course details interface.png "  /><br>
+<img src="{{site.baseurl}}/assets/img/Course details interface.JPG "  /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
@@ -96,7 +96,7 @@ The following pictures are some screenshot from our appliction to present severa
 </center>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/Course query interface.png "  /><br>
+<img src="{{site.baseurl}}/assets/img/Course query interface.JPG "  /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
