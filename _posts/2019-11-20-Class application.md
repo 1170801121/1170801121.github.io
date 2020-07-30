@@ -80,7 +80,7 @@ The following pictures are some screenshot from our appliction to present severa
 </center>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/Recording transcription and keyword extraction module.png "  /><br>
+<img src="{{site.baseurl}}/assets/img/Recording transcription and keyword extraction module.JPG "  /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
