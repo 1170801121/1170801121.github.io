@@ -72,7 +72,7 @@ As for the schedule extracting model, we started with **recognizers_date_time of
 ## Project Presentation
 The following pictures are some screenshot from our appliction to present several functional interface.
 <center>
-<img src="{{site.baseurl}}/assets/img/User login module.png " width="35%" height="35%" /><br>
+<img src="{{site.baseurl}}/assets/img/User login module.png " width="10%" height="10%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
