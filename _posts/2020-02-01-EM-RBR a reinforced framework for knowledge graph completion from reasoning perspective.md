@@ -1,5 +1,5 @@
 ---
-title: EM-RBR: a reinforced framework for knowledge graph completion from reasoning perspective
+title: EM-RBR: a reinforced framework for knowledge graph completion
 layout: post
 tags: 
 img: overview.JPG
