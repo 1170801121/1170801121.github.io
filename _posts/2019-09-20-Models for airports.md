@@ -5,7 +5,7 @@ tags:
 img: taxi.jfif
 ---
 
-Luckily, I was selected as a member of HIT Smart Car Innovational Club in Oct.2017 , a club that is aimed at the 13th National University NXP Cup of Smart Car Competition.  My team members : **Jianyu Xiong, Rui Li**.
+Luckily, I was selected as a member of HIT Mathematical modeling Club to address a specific problem for governments projects.  My team members : **Jianyu Xiong, Rui Li**.
 
 大多数乘客下飞机后要去市区（或周边）的目的地，出租车是主要的交通工具之一。国内多数机场都是将送客（出发）与接客（到达）通道分开的。送客到机场的出租车司机都将会面临两个选择：进入蓄车池等待载客则需要付出相应的时间成本，而选择放空直接返回市区则需要付出空载费用和可能损失潜在的载客收益。在某时间段抵达的航班数量和“蓄车池”里已有的车辆数是司机可观测到的确定信息，如何根据已知信息去做出判断使得利益最大化就十分重要了。
 
