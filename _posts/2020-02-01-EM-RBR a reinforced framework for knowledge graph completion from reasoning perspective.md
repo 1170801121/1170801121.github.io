@@ -1,7 +1,7 @@
 ---
 title: EM-RBR: a reinforced framework for knowledge graph completion from reasoning perspective
 layout: post
-tags: Mass Data Research Center in HIT 
+tags: 
 img: overview.JPG
 categories: ''
 ---
