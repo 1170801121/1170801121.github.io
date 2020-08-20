@@ -26,21 +26,22 @@ Because of the high expression ability of complex graph structure modeling, the 
 ## Pseudocode
 
 **Program 1 ：BFSBC ($G$，$v_k$， $L_{k-1}^{'}$)**
-    1. Q ← A queue with only one element $v_k$
-    2. for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
-    3.   for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
-    4.   when $Q$ is not empty:
-    5. 	pop-up head element $u$ in $Q$
-    6.		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
-    7.			continue
-    8.		$L_k^{'} [u]←L_{k-1}^{'} [u]∪ \{(v_k,P[u])\}$
-    9.		mark $v_k$ as hop point
-    10.		for all $w ∈ N_G (v)$  where $P[w] = +∞$
-    11.			$P[w] = P[u] + 1$
-    12.			put $w$ into $Q$
-    13.	return $L_k^{'}$
+    Q ← A queue with only one element $v_k$
+    for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
+    	for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
+    	when $Q$ is not empty:
+    	pop-up head element $u$ in $Q$
+    		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
+    			continue
+    		$L_k^{'} [u]←L_{k-1}^{'} [u]∪ \{(v_k,P[u])\}$
+    		mark $v_k$ as hop point
+    		for all $w ∈ N_G (v)$  where $P[w] = +∞$
+    			$P[w] = P[u] + 1$
+    			put $w$ into $Q$
+    return $L_k^{'}$
 
 **Program 1 ：BFSBC ($G$，$v_k$， $L_{k-1}^{'}$)**
+
    1. Q ← A queue with only one element $v_k$
    2. for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
    3.   for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
