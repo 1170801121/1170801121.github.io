@@ -41,10 +41,10 @@ Because of the high expression ability of complex graph structure modeling, the 
    13.	return $L_k^{'}$
 
 **Program 2 ：Calculating 2-hop Coverage by BFSBC Algorithm (G)**
-1   for all $v ∈ V(G),L_0^{'} [v]= ϕ$
-2   for $k ←1 $ to $ n$
-3   	$L_k^{'} $ $←$ BFSBC ($G，v_k， L_{k-1}^{'}$)
-4   return $L_n^{'}$
+   1. for all $v ∈ V(G),L_0^{'} [v]= ϕ$
+   2. for $k ←1 $ to $ n$
+   3. 	$L_k^{'} $ $←$ BFSBC ($G，v_k， L_{k-1}^{'}$)
+   4. return $L_n^{'}$
 
 最终通过程序2，对于给定的点的遍历顺序，调用程序1中的剪切BFS算法每次更新上一次所得的索引结构，得到的返回结果就是初步计算出在大图上的全局性的索引结构，同时在索引中出现的点所构成的集合即为2-hop覆盖。
 Finally, through program 2, for a given traversal order of points, call the BFSBC algorithm in program 1 to update the index structure each time. **The result is that the initially global index structure on the graph, and the set of points appearing in the index is 2-hop coverage.**
@@ -56,22 +56,22 @@ To prove that the correct 2-hop cover is selected, we just need to prove that $Q
 From the demonstrating process, we can show that BFSBC can select the correct 2-hop cover and can accurately answer the relative distance queries.
 
 **Program 3：Hop point index update algorithm $(G， L_k)$**
-1   when there is a hop point $v_h$ in $G$ that has not been traversed as a starting point
-2   	for all $v ∈ V(G)$，query whether $v$ can reach $v_h$ by index $L_k$
-3   		if $v$ can reach $v_h$ then
-4				determine the type of point $v$, get type $A$, add ($A, v$) to the reachLable field of $L_K[v_h]$
-5			else
-6				continue
-7	return updated $L_k$
+1.   when there is a hop point $v_h$ in $G$ that has not been traversed as a starting point
+2.  	for all $v ∈ V(G)$，query whether $v$ can reach $v_h$ by index $L_k$
+3.  		if $v$ can reach $v_h$ then
+4.				determine the type of point $v$, get type $A$, add ($A, v$) to the reachLable field of $L_K[v_h]$
+5.			else
+6.				continue
+7.	return updated $L_k$
 
 **Program 4 ：$W$ table building algorithm $(G， L_k)$**
-1   for $A,B∈T$，$T$ is a collection of all types of points in $G$, creating corresponding table entries for the $W$ table in the form of binaries $(A, B)$
-2   for each hop point $v_h ∈ G$，examine each table item $ (A, B)$ in table $W$
-3   		if $L_k [v_h]$.reachLabel.contains($A$)&& $L_k [v_h]$.reachLabel.contains($B$) then
-4				$W(A,B) ← v_h$
-5			else
-6				continue
-7	return $W$表
+1.   for $A,B∈T$，$T$ is a collection of all types of points in $G$, creating corresponding table entries for the $W$ table in the form of binaries $(A, B)$
+2.   for each hop point $v_h ∈ G$，examine each table item $ (A, B)$ in table $W$
+3.   		if $L_k [v_h]$.reachLabel.contains($A$)&& $L_k [v_h]$.reachLabel.contains($B$) then
+4.				$W(A,B) ← v_h$
+5.			else
+6.				continue
+7.	 return $W$表
 **Program 3 and program 4 are used to establish and update the index using global index from program 1 and 2.** More details can be found in my paper.
 
 
