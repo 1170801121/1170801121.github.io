@@ -124,6 +124,25 @@ Experiments data comes from:Http://swat.cse.lehigh.edu/projects/lubm/Read. .The 
 </center>
 可以看到在测试图上图索引生成的时间为242477毫秒(ms)=4.0412833(min)。由于hop点是实际作为索引的点，所以可以看到该索引构建算法具有良好的空间性能。
 We can see that on the test chart, the index generation time is 24242477 milliseconds = 4.0412833 (min). The set size of Hop cover is 25% of the actual number of vertices. Since hop points are the actual points to be indexed, you can see that the index building algorithm has good spatial performance.
+
+<center>
+<img src="{{site.baseurl}}/assets/img/match graph.JPG" width="55%" height="55%" /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Shortest path query</div><br>
+</center>
+We can see that shortest path query time on the index built on the test chart is 0.101525 seconds.
+
+<center>
+<img src="{{site.baseurl}}/assets/img/reach.JPG" width="55%" height="55%" /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Accessibility query</div><br>
+</center>
+We can see that accessibility query time on the index built on the test chart is 0.145033 seconds.
+
 <center>
 <img src="{{site.baseurl}}/assets/img/match graph.JPG" width="55%" height="55%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
@@ -131,4 +150,4 @@ We can see that on the test chart, the index generation time is 24242477 millise
     color: #999;
     padding: 2px;">Graph matching query</div><br>
 </center>
-We can see that accessibility query time on the index built on the test chart is 55.418 seconds.
+We can see that graph matching query time on the index built on the test chart is 55.418 seconds.
