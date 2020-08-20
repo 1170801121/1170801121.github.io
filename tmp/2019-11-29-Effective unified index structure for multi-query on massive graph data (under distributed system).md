@@ -7,8 +7,20 @@ categories: ''
 ---
 ## Background
 
+因为图形具有对复杂结构建模的高表达能力，将数据建模为图形的应用需求越来越多,并且来自各种学科(如生物网络、社会网络、本体、XML和RDF数据库等)的数据规模爆炸式的增长的图的快速积累激起了广泛的大图查询的需求。处理大规模图数据的能力对于越来越多的应用程序是至关重要的。面对这样广泛的大图查询的需求，就需要在图上提前建立有效的索引结构以加速查询，提高大图查询的效率。这样广泛的大图查询的需求就要求新的建立在图数据上的索引结构，索引结构不仅要使用户能够高效地访问查询图数据，而且也要有效的减小图数据库的系统空间占用，但是若采用分别为每一种查询建立独立的索引结构这样的方法将占用大量的系统空间，导致图数据库的性能急剧下降，不能被真正的应用。因此，本文提出了一种新的多查询统一索引结构以及该索引结构的构建算法，可以同时满足图上的可达、最短路径、图匹配三种查询，采用本文的索引结构就可以避免分别对这三种查询建立三个索引所引起的内存空间的浪费以及性能的下降。
+
 Because of the high expression ability of complex graph structure modeling, the application demand of data modeling as graphics is increasing, and the rapid accumulation of data from various disciplines (such as biological network, social network, ontology, XML and RDF database, etc.) has aroused the demand of extensive large-scale graph-based query. The ability to process large-scale graph data is critical for more and more applications. In the face of such a wide range of large-scale query requirements, it is necessary to establish an effective index structure on the graph in advance to speed up the query and improve the efficiency of large-scale query. Such a wide range of large-scale query needs a new index structure based on graph data. **The index structure should not only enable users to access the query graph data efficiently, but also effectively reduce the system space occupation of graph database. However, if the independent index structure is established for each query, this method will occupy a lot of system space, resulting in the performance of the database to decline sharply, so it can't be used in real application.** Therefore, this paper **proposes a new multi query unified index structure and the construction algorithm of the index structure, which can meet the three queries of reachability, shortest path and graph matching at the same time**. By using the index structure of this paper, we can **avoid the waste of memory space and performance degradation caused by the establishment of three indexes for these three queries respectively**.
 
+
+The specific process can be described in the following figure:
+
+<center>
+<img src="{{site.baseurl}}/assets/img/DBQAflow.png" width="55%" height="55%" /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">project process</div><br>
+</center>
 ## Contributions
 
 
@@ -94,7 +106,7 @@ The following illustration illustrates the query process for graph matching:
 </center>
 
 <center>
-<img src="{{site.baseurl}}/assets/img/pattern graph.png" width="25%" height="25%" /><br>
+<img src="{{site.baseurl}}/assets/img/pattern graph.png" width="55%" height="55%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
