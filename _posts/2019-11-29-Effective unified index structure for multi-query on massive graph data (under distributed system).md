@@ -28,9 +28,10 @@ Because of the high expression ability of complex graph structure modeling, the 
 **Program 1 ：BFSBC ($G$，$v_k$， $L_{k-1}^{'}$)**
 
 >Q ← A queue with only one element $v_k$
+    
     for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
     	for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
-    	when $Q$ is not empty:
+      	when $Q$ is not empty:
       	pop-up head element $u$ in $Q$
       		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
       			continue
