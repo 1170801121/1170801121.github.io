@@ -24,6 +24,9 @@ discus-identifier: mr-brown # add your discus identifier
 # Tracker
 analytics: # Google Analytics
 
+# Google Analytics
+google_analytics: UA-176053492-1
+
 # Build Settings
 markdown: kramdown
 plugins:
