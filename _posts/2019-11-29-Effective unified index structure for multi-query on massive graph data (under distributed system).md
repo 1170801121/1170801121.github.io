@@ -27,7 +27,7 @@ Because of the high expression ability of complex graph structure modeling, the 
 
 **Program 1 ：BFSBC ($G$，$v_k$， $L_{k-1}^{'}$)**
 <center>
-<img src="{{site.baseurl}}/assets/img/BFSBC.jpg" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/BFSBC.JPG" width="55%" height="55%" /><br>
 </center>
 
    Q ← A queue with only one element $v_k$
@@ -46,7 +46,7 @@ Because of the high expression ability of complex graph structure modeling, the 
 
 **Program 2 ：Calculating 2-hop Coverage by BFSBC Algorithm (G)**
 <center>
-<img src="{{site.baseurl}}/assets/img/p2.jpg" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/p2.JPG" width="55%" height="55%" /><br>
 </center>
    for all $v ∈ V(G),L_0^{'} [v]= ϕ$
    for $k ←1 $ to $ n$
@@ -64,7 +64,7 @@ From the demonstrating process, we can show that BFSBC can select the correct 2-
 
 **Program 3：Hop point index update algorithm $(G， L_k)$**
 <center>
-<img src="{{site.baseurl}}/assets/img/p3.jpg" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/p3.JPG" width="55%" height="55%" /><br>
 </center>
    when there is a hop point $v_h$ in $G$ that has not been traversed as a starting point
   	for all $v ∈ V(G)$，query whether $v$ can reach $v_h$ by index $L_k$
@@ -76,7 +76,7 @@ From the demonstrating process, we can show that BFSBC can select the correct 2-
 
 **Program 4 ：$W$ table building algorithm $(G， L_k)$**
 <center>
-<img src="{{site.baseurl}}/assets/img/p4.jpg" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/p4.JPG" width="55%" height="55%" /><br>
 </center>
    for $A,B∈T$，$T$ is a collection of all types of points in $G$, creating corresponding table entries for the $W$ table in the form of binaries $(A, B)$
    for each hop point $v_h ∈ G$，examine each table item $ (A, B)$ in table $W$
