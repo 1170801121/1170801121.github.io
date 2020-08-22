@@ -26,47 +26,32 @@ Because of the high expression ability of complex graph structure modeling, the 
 ## Pseudocode
 
 **Program 1 ：BFSBC ($G$，$v_k$， $L_{k-1}^{'}$)**
+<center>
+<img src="{{site.baseurl}}/assets/img/BFSBC.jpg" width="55%" height="55%" /><br>
+</center>
 
->Q ← A queue with only one element $v_k$
->    
->    for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
->    
->    	for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
->    	
->      	when $Q$ is not empty:
->      	
->      	pop-up head element $u$ in $Q$
->      	
->      		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
->      			continue
->      		$L_k^{'} [u]←L_{k-1}^{'} [u]∪ \{(v_k,P[u])\}$
-      		mark $v_k$ as hop point
-      		for all $w ∈ N_G (v)$  where $P[w] = +∞$
-      			$P[w] = P[u] + 1$
-      			put $w$ into $Q$
-      return $L_k^{'}$
-
-**Program 1 ：BFSBC ($G$，$v_k$， $L_{k-1}^{'}$)**
-
-   1. Q ← A queue with only one element $v_k$
-   2. for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
-   3.   for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
-   4.   when $Q$ is not empty:
-   5. 	pop-up head element $u$ in $Q$
-   6.		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
-   7.			continue
-   8.		$L_k^{'} [u]←L_{k-1}^{'} [u]∪ \{(v_k,P[u])\}$
-   9.		mark $v_k$ as hop point
-   10.		for all $w ∈ N_G (v)$  where $P[w] = +∞$
-   11.			$P[w] = P[u] + 1$
-   12.			put $w$ into $Q$
-   13.	return $L_k^{'}$
+   Q ← A queue with only one element $v_k$
+   for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
+   for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
+   when $Q$ is not empty:
+   		pop-up head element $u$ in $Q$
+   		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
+   			continue
+   		$L_k^{'} [u]←L_{k-1}^{'} [u]∪ \{(v_k,P[u])\}$
+   		mark $v_k$ as hop point
+   		for all $w ∈ N_G (v)$  where $P[w] = +∞$
+   			$P[w] = P[u] + 1$
+   			put $w$ into $Q$
+   return $L_k^{'}$
 
 **Program 2 ：Calculating 2-hop Coverage by BFSBC Algorithm (G)**
-   1. for all $v ∈ V(G),L_0^{'} [v]= ϕ$
-   2. for $k ←1 $ to $ n$
-   3. 	$L_k^{'} $ $←$ BFSBC ($G，v_k， L_{k-1}^{'}$)
-   4. return $L_n^{'}$
+<center>
+<img src="{{site.baseurl}}/assets/img/p2.jpg" width="55%" height="55%" /><br>
+</center>
+   for all $v ∈ V(G),L_0^{'} [v]= ϕ$
+   for $k ←1 $ to $ n$
+   	$L_k^{'} $ $←$ BFSBC ($G，v_k， L_{k-1}^{'}$)
+   return $L_n^{'}$
 
 最终通过程序2，对于给定的点的遍历顺序，调用程序1中的剪切BFS算法每次更新上一次所得的索引结构，得到的返回结果就是初步计算出在大图上的全局性的索引结构，同时在索引中出现的点所构成的集合即为2-hop覆盖。
 Finally, through program 2, for a given traversal order of points, call the BFSBC algorithm in program 1 to update the index structure each time. **The result is that the initially global index structure on the graph, and the set of points appearing in the index is 2-hop coverage.**
@@ -78,22 +63,28 @@ To prove that the correct 2-hop cover is selected, we just need to prove that $Q
 From the demonstrating process, we can show that BFSBC can select the correct 2-hop cover and can accurately answer the relative distance queries.
 
 **Program 3：Hop point index update algorithm $(G， L_k)$**
-1.   when there is a hop point $v_h$ in $G$ that has not been traversed as a starting point
-2.  	for all $v ∈ V(G)$，query whether $v$ can reach $v_h$ by index $L_k$
-3.  		if $v$ can reach $v_h$ then
-4.				determine the type of point $v$, get type $A$, add ($A, v$) to the reachLable field of $L_K[v_h]$
-5.			else
-6.				continue
-7.	return updated $L_k$
+<center>
+<img src="{{site.baseurl}}/assets/img/p3.jpg" width="55%" height="55%" /><br>
+</center>
+   when there is a hop point $v_h$ in $G$ that has not been traversed as a starting point
+  	for all $v ∈ V(G)$，query whether $v$ can reach $v_h$ by index $L_k$
+  		if $v$ can reach $v_h$ then
+				determine the type of point $v$, get type $A$, add ($A, v$) to the reachLable field of $L_K[v_h]$
+			else
+				continue
+	return updated $L_k$
 
 **Program 4 ：$W$ table building algorithm $(G， L_k)$**
-1.   for $A,B∈T$，$T$ is a collection of all types of points in $G$, creating corresponding table entries for the $W$ table in the form of binaries $(A, B)$
-2.   for each hop point $v_h ∈ G$，examine each table item $ (A, B)$ in table $W$
-3.   		if $L_k [v_h]$.reachLabel.contains($A$)&& $L_k [v_h]$.reachLabel.contains($B$) then
-4.				$W(A,B) ← v_h$
-5.			else
-6.				continue
-7.	 return $W$表
+<center>
+<img src="{{site.baseurl}}/assets/img/p4.jpg" width="55%" height="55%" /><br>
+</center>
+   for $A,B∈T$，$T$ is a collection of all types of points in $G$, creating corresponding table entries for the $W$ table in the form of binaries $(A, B)$
+   for each hop point $v_h ∈ G$，examine each table item $ (A, B)$ in table $W$
+   		if $L_k [v_h]$.reachLabel.contains($A$)&& $L_k [v_h]$.reachLabel.contains($B$) then
+				$W(A,B) ← v_h$
+			else
+				continue
+   return table $W$
 **Program 3 and program 4 are used to establish and update the index using global index from program 1 and 2.** More details can be found in my paper.
 
 
