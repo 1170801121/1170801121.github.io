@@ -12,12 +12,6 @@ Because of the high expression ability of complex graph structure modeling, the 
 ## Contributions
 
 
-1. 设计了一个可以同时满足图上的可达、最短路径、图匹配三种查询的统一的索引结构。
-2. 提出了一个在时间和空间具有高效性的基于2-hop点的统一索引的构建算法。
-3. 在统一索引构建算法中打破了传统的2-hop点的选取方案，采用了基于剪切的BFS搜索算法，能够选取到正确的且具有好的空间性能的hop cover。该算法可以在运行时动态剪切，有效的缩减图的规模。
-4. 提出了通过将要匹配的模式图分解单条边的形式后，再将每边的匹配结果进行join，从而便捷高效的借助索引，快速得到图匹配的结果的图匹配查询方法。
-
-
 1. A unified index structure is designed which can satisfy the reachability, shortest path and graph matching.
 2. An efficient 2-hop point based construction algorithm for the unified index is proposed.
 3. In the unified index building algorithm, the traditional 2-hop point selection scheme is broken, and the BFSBC algorithm (BFS  Based on Clipping) is adopted, which can select the correct hop cover with good spatial performance. The algorithm can cut dynamically at run time and reduce the size of graph effectively.
@@ -30,33 +24,14 @@ Because of the high expression ability of complex graph structure modeling, the 
 <img src="{{site.baseurl}}/assets/img/BFSBC.JPG" width="55%" height="55%" /><br>
 </center>
 
-   Q ← A queue with only one element $v_k$
-   for all $v∈V(G) - {v_k}，P [v_k] ← 0 $ and $P [v]  ← +∞$
-   for all $v∈V(G)，L_k^{'} [v] ← L_{k-1}^{'} [v]$
-   when $Q$ is not empty:
-   		pop-up head element $u$ in $Q$
-   		If $Query(v_k,u,L_{k-1}^{'}) <= P[u]$ then
-   			continue
-   		$L_k^{'} [u]←L_{k-1}^{'} [u]∪ \{(v_k,P[u])\}$
-   		mark $v_k$ as hop point
-   		for all $w ∈ N_G (v)$  where $P[w] = +∞$
-   			$P[w] = P[u] + 1$
-   			put $w$ into $Q$
-   return $L_k^{'}$
 
 **Program 2 ：Calculating 2-hop Coverage by BFSBC Algorithm (G)**
 <center>
-<img src="{{site.baseurl}}/assets/img/p2.JPG" width="55%" height="55%" /><br>
+<img src="{{site.baseurl}}/assets/img/p2.JPG" width="25%" height="25%" /><br>
 </center>
-   for all $v ∈ V(G),L_0^{'} [v]= ϕ$
-   for $k ←1 $ to $ n$
-   	$L_k^{'} $ $←$ BFSBC ($G，v_k， L_{k-1}^{'}$)
-   return $L_n^{'}$
 
-最终通过程序2，对于给定的点的遍历顺序，调用程序1中的剪切BFS算法每次更新上一次所得的索引结构，得到的返回结果就是初步计算出在大图上的全局性的索引结构，同时在索引中出现的点所构成的集合即为2-hop覆盖。
 Finally, through program 2, for a given traversal order of points, call the BFSBC algorithm in program 1 to update the index structure each time. **The result is that the initially global index structure on the graph, and the set of points appearing in the index is 2-hop coverage.**
 
-要证明选择了正确的2-hop cover，只需要证明对于任意的0 ≤k≤n, 以及对任意的顶点对v,t 满足 QUERY(s,t,L_k^') = QUERY(s,t,L_k)，这里符号为剪切BFS方法建立的索引L_k^'，通过其他方法建立的正确2-hop cover的索引为L_k。
 
 To prove that the correct 2-hop cover is selected, we just need to prove that $QUERY (s, t, L_k^{'}) = QUERY (s, t, L_K)$ is satisfied for any $0 < K < n$, and for any pair of vertices $v, t$, where $L_k^{'}$ is the index created by BFSBC and $L_K$ is  the index  created by other correct 2-hop cover computing methods. The details demonstrating process can be found in my paper from 
 
@@ -66,25 +41,12 @@ From the demonstrating process, we can show that BFSBC can select the correct 2-
 <center>
 <img src="{{site.baseurl}}/assets/img/p3.JPG" width="55%" height="55%" /><br>
 </center>
-   when there is a hop point $v_h$ in $G$ that has not been traversed as a starting point
-  	for all $v ∈ V(G)$，query whether $v$ can reach $v_h$ by index $L_k$
-  		if $v$ can reach $v_h$ then
-				determine the type of point $v$, get type $A$, add ($A, v$) to the reachLable field of $L_K[v_h]$
-			else
-				continue
-	return updated $L_k$
 
 **Program 4 ：$W$ table building algorithm $(G， L_k)$**
 <center>
 <img src="{{site.baseurl}}/assets/img/p4.JPG" width="55%" height="55%" /><br>
 </center>
-   for $A,B∈T$，$T$ is a collection of all types of points in $G$, creating corresponding table entries for the $W$ table in the form of binaries $(A, B)$
-   for each hop point $v_h ∈ G$，examine each table item $ (A, B)$ in table $W$
-   		if $L_k [v_h]$.reachLabel.contains($A$)&& $L_k [v_h]$.reachLabel.contains($B$) then
-				$W(A,B) ← v_h$
-			else
-				continue
-   return table $W$
+
 **Program 3 and program 4 are used to establish and update the index using global index from program 1 and 2.** More details can be found in my paper.
 
 
@@ -135,7 +97,7 @@ Experiments data comes from:Http://swat.cse.lehigh.edu/projects/lubm/Read. .The 
     color: #999;
     padding: 2px;">Index generation</div><br>
 </center>
-可以看到在测试图上图索引生成的时间为242477毫秒(ms)=4.0412833(min)。由于hop点是实际作为索引的点，所以可以看到该索引构建算法具有良好的空间性能。
+
 We can see that on the test chart, the index generation time is 24242477 milliseconds = 4.0412833 (min). The set size of Hop cover is 25% of the actual number of vertices. Since hop points are the actual points to be indexed, you can see that the index building algorithm has good spatial performance.
 
 <center>
