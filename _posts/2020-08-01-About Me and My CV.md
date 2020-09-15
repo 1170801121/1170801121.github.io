@@ -6,7 +6,7 @@ categories: ''
 tags: ''
 ---
 ## Biography
-Zhaochong is a senior student major in Computer Science at Harbin Institute of Techology. He obtained the 13th in his major among 266 students. He worked as a research assistant in Mass Data Research Center at HIT, under the supervision of Hongzhi Wang. He has joined 6 projects, working on artificial intelligence such as  knowledge graph & reasoning and question answering system, and algorithm for massive data computing. He seeks to use these advancements to help in making progress on core AI problems. He enjoys collaborating with a diverse set of researchers to tackle these issues! My CV is [here](https://github.com/1170801121/1170801121.github.io/tree/master/assets/CV%20Zhaochong.pdf).
+Zhaochong is a senior student major in Computer Science at Harbin Institute of Techology. He obtained the 13th in his major among 266 students. He worked as a research assistant in Mass Data Research Center at HIT, under the supervision of Hongzhi Wang. He has joined 6 projects, working on artificial intelligence such as  knowledge graph & reasoning and question answering system, and algorithm for massive data computing. He seeks to use these advancements to help in making progress on core AI problems. He enjoys collaborating with a diverse set of researchers to tackle these issues! **My CV is [here](https://github.com/1170801121/1170801121.github.io/tree/master/assets/CV%20Zhaochong.pdf)**.
 
 ## Education
 
