@@ -1,5 +1,5 @@
 ---
-title: One-stop Artificial Intelligence Class Assistant App
+title: One-stop Intelligent Class Assistant App
 layout: post
 tags: 
 img: class.jpg
