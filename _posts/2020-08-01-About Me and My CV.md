@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: About Me and My CV
 layout: post
 img: i-rest.jpg
 categories: ''
