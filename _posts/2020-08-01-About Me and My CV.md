@@ -24,6 +24,23 @@ Zhaochong is a senior student major in Computer Science at Harbin Institute of T
 * Effective unified index structure for multi-query on massive graph data (under distributed system environment) 
 * Intelligent Multi-functional Badminton Robot
 
+
+## My CV Screenshot
+<center>
+<img src="{{site.baseurl}}/assets/img/CV-ANpng_Page1.png" width="55%" height="55%" /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;"></div><br>
+</center>
+<center>
+<img src="{{site.baseurl}}/assets/img/CV-ANpng_Page2.png" width="55%" height="55%" /><br>
+<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;"></div><br>
+</center>
+
 ## Extra-curriculum activities
 
 <center>
