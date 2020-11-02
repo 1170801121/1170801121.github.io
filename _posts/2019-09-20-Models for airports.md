@@ -5,7 +5,7 @@ tags:
 img: taxi.jfif
 ---
 
-Luckily, I was selected as a member of HIT Mathematical modeling Club to address a specific problem for governments projects.  My team members : **Jianyu Xiong, Rui Li**.
+Luckily, I was selected as a member of HIT Mathematical modeling Club to address a specific problem for airport projects.  My team members : **Jianyu Xiong, Rui Li**.
 
 After most passengers get off the plane, they have to go to the city (or  surrounding) destination. Taxi is one of the main means of  transportation. Most domestic airports separate **the delivery (departure) and pickup (arrival) passages**. Taxi drivers who send passengers to the airport will face **two choices**:  entering the car storage pool to wait for passengers will need to pay  the corresponding time cost, while choosing to empty directly back to  the city will need to pay the no-load cost and potential loss of  passenger income. The number of flights arrived in a certain period of time and the  number of vehicles in the "car storage pool" are certain information that can be observed by the driver. How to **make a judgment based on the  known information to maximize the benefits** is very important. 
 
