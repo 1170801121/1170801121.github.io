@@ -5,7 +5,7 @@ tags:
 img: class.jpg
 ---
 
-In this work, we develop an application that is aimed at the 2020 National University IoT Design Competition.  My team members : **Weihong Zhong, Wenjie Ten, Jianyu Xiong**.
+In this work, we develop an application to help students review more effectively.  My team members : **Weihong Zhong, Wenjie Ten, Jianyu Xiong**. We have already put the app to use in our university’s seminars and received over 200 positive comments from students and teachers!
 
 ## Project Value
 

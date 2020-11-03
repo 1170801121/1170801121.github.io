@@ -1,19 +1,20 @@
 ---
-title: Profit Optimization for Taxi Driver and Passengers Using Large Dataset 
+title: Profit Optimization for Taxi Drivers at Airports Using a Large Dataset 
 layout: post
 tags: 
 img: taxi.jfif
 ---
 
-Luckily, I was selected as a member of HIT Mathematical modeling Club to address a specific problem for airport projects.  My team members : **Jianyu Xiong, Rui Li**.
+To help taxi drivers at airports make the most proﬁtable decisions (whether to wait at the arrival gates, or drive downtown to seek passengers), I established a mathematical model, and used a Python crawler to collect data and optimize the model. My application achieved an approximately 100% increase in eﬃciency for drivers, and I am proud that it has been used at Harbin Taiping International Airport. 
 
-After most passengers get off the plane, they have to go to the city (or  surrounding) destination. Taxi is one of the main means of  transportation. Most domestic airports separate **the delivery (departure) and pickup (arrival) passages**. Taxi drivers who send passengers to the airport will face **two choices**:  entering the car storage pool to wait for passengers will need to pay  the corresponding time cost, while choosing to empty directly back to  the city will need to pay the no-load cost and potential loss of  passenger income. The number of flights arrived in a certain period of time and the  number of vehicles in the "car storage pool" are certain information that can be observed by the driver. How to **make a judgment based on the  known information to maximize the benefits** is very important. 
+## Background
+After most passengers get off the plane, they have to go to the city (or surrounding) destination. Taxi is one of the main means of  transportation. Most domestic airports separate **the delivery (departure) and pickup (arrival) passages**. So taxi drivers who send passengers to the airport will face **two choices**:  the choice for entering the car waiting pool to pick up passengers need corresponding time cost, while choosing to drive directly back to the city without taking passengers need to pay the potential income loss from passengers in the airports. The number of flights arrived in a certain period and the number of taxis and passengers are the information that can be observed by taxi drivers. So how to **make a judgment based on the  known information to maximize the benefits of drivers** is very important. 
 
-By analyzing and studying the influencing mechanism of factors related to taxi driver's decision-making, taking into account the changing law of airport passenger number and taxi driver's income, I set up a decision-making model for taxi driver's choice, and gave the driver's choice strategy: using the evaluation system of "**net income per unit time**", I calculated the net income per unit time of the two schemes respectively, and finally selected the scheme with a larger net income per unit time. When calculating the net income per unit time of scheme a, we focus on establishing **a queuing time model based on algorithm simulation**. The model carefully considers the impact of the arrival flight information list, the current number of taxi queuing L, the current number of passengers waiting for boarding 𝑝0 on the queuing time. The highlight of the model is to **simulate the flight arrival information one by one to ensure the accuracy of the output**.
+I analyzed the influencing mechanism of factors related to taxi driver's profits, then set up a taxi driver's decision-making model based on queuing theory, and gave the reasonable choice strategy. I used the evaluation system of "**net income per unit time**", and calculated the net income per unit time of the two choices respectively, and finally selected the choice with a larger net income per unit time. When calculating the net income per unit time of each choice, I established a model to simulate **the queuing time**. The model considers the impact of the arrival flight information, the number of taxi in the queue L, the number of passengers waiting for taxis 𝑝0. The highlight of the model is to **simulate the relevant information comprehensively to ensure the accuracy of the prediction**.
 
 
 
-By selecting **Shanghai Pudong International Airport and its taxis** as the  research objects, we use **Python crawler to collect in-depth relevant  information of Shanghai Pudong International Airport**, such as flight  information table, population density map of Shanghai, taxi pricing  formula of Shanghai, etc., give the taxi driver selection scheme of the  airport, and analyze the rationality of the model and the relevant  factors Element dependence. According to the population density map of Shanghai, we creatively  **establish the relationship model between the population density and the  probability density of taxi mileage, which makes the data closer to the  reality**. When analyzing the dependence of the model, we take a series of proper  passenger 𝑝0 values which are waiting to get on the train at present,  and then draw the decision scatter diagram under each 𝑝0 value, different arrival time t and the number of waiting taxis L. **Based on these scatter diagrams, we analyze the dependence of the model on the relevant input and the rationality of the model**. 
+By selecting **Shanghai Pudong International Airport** as the research object, I used **a Python crawler to collect relevant information of Shanghai Pudong International Airport**, such as flight information, taxi information, population probability density of Shanghai, taxi mileage probability density, taxi pricing formula, etc. I  **modeled the relationship between the population probability density and the taxi mileage probability density**, which made the model closer to the reality. And I conducted many simulation experiments. More specifically, I took a series of 𝑝0, the number of passengers waiting for taxis,  and then draw the decision scatter diagram under each 𝑝0 value at different arrival time t and the number of taxis L. **Based on these scatter diagrams, I analyzed the model’s dependence on relevant factors and the model's rationality**. 
 
 <center>
 <img src="{{site.baseurl}}/assets/img/pydata1.png" width="55%" height="55%" /><br>
@@ -41,9 +42,9 @@ By selecting **Shanghai Pudong International Airport and its taxis** as the  res
 
 
 
-By establishing a mathematical model that considers factors such as safety, ride efficiency, management cost and uncertainty of passengers' boarding time in real situation, **we help the management department to simulate how to set "boarding point" and arrange taxis and passengers reasonably**, so that the total ride efficiency is the highest under the condition of ensuring the safety of vehicles and passengers
+Besides, by considering factors such as safety, ride efficiency, management cost and uncertainty of passengers' boarding time, **I helped the management department at airports to make decision on how to set the boarding point for passengers and arrange taxi drivers and passengers** to make the total ride efficiency the highest when ensuring the safety of vehicles and passengers. 
 
-First of all, we consider how to ensure the safety of vehicles and passengers. After analysis and demonstration, according to a rule, **we first get a scheme of taxi entry and exit**, and in the scheme, we can properly arrange the time for passengers to get on the bus, so that the safety of passengers can be guaranteed, and the waiting time of passengers can be reduced as soon as possible, and the service comfort of passengers can be improved.
+To ensure the safety of vehicles and passengers, I **firstly established a scheme of taxi entry and exit**, and then properly arranged passengers to get on the taxis under the scheme to reduce the waiting time of passengers as soon as possible.
 
 <center>
 <img src="{{site.baseurl}}/assets/img/442.JPG" width="55%" height="55%" /><br>
@@ -55,9 +56,9 @@ First of all, we consider how to ensure the safety of vehicles and passengers. A
     padding: 2px;">a scheme of taxi entry and exit</div>
 </center>
 
-Under this scheme, we also discuss the influence of the number of taxis waiting for passengers at the same time in the parking area on the departure rate per unit time, and because of the instability of passengers' boarding time, the departure rate per unit time will also be affected. We have established **a mathematical model, considered the above factors, calculated the unit time drive out rate corresponding to different parking spaces, and comprehensively considered the actual factors such as management cost, and obtained an optimal scheme**, so that the driver's income will be increased, and the cost paid by the management department will not be wasted too much. In particular, we consider **the impact of uncertainty in the real situation**, which is a bright spot. At last, the load rate of each parking space and the feasible adjustment method are discussed.
+Under this scheme, I also discussed the influence of the number of taxis waiting for passengers at the same time in the parking area on the departure rate per unit time, and because of the instability of passengers' boarding time, the departure rate per unit time will also be affected. We have established **a mathematical model, considered the above factors, calculated the unit time drive out rate corresponding to different parking spaces, and comprehensively considered the actual factors such as management cost, and obtained an optimal scheme**, so that the driver's income will be increased, and the cost paid by the management department will not be wasted too much. In particular, we consider **the impact of uncertainty in the real situation**, which is a bright spot. At last, the load rate of each parking space and the feasible adjustment method are discussed.
 
-$T$ is the time from the time when all vehicles of the k-th enter the departure area to the time when all vehicles of the K+1-th enter the departure area.  In the process of derivation, we compute $T$ differently when the amount of parking spaces $2i$ is varied as follows.
+$T$ is the time from the time when all vehicles of the k-th enter the departure area to the time when all vehicles of the K+1-th enter the departure area.  In the process of derivation, I computed $T$ differently when the amount of parking spaces $2i$ is varied as follows.
 
 <center>
 <img src="{{site.baseurl}}/assets/img/445.JPG" width="55%" height="55%" /><br>
@@ -70,7 +71,7 @@ $T$ is the time from the time when all vehicles of the k-th enter the departure 
 </center>
 
 
-For the random time of passengers' boarding, we can get the frequency  distribution chart in the following table from references, use the Monte Carlo method to process the data.
+For the queuing theory–based models’ inherent uncertainties, such as  the random passenger boarding time, I firstly got the frequency  distribution chart as follows, using the Monte Carlo method to process the data.
 <center>
 <img src="{{site.baseurl}}/assets/img/448.JPG"  /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
@@ -80,10 +81,10 @@ For the random time of passengers' boarding, we can get the frequency  distribut
 </center>
 
 
-Then use the linear interpolation method to get a random time m of passengers' boarding $M$ :  $M(rand) = y_1 + \frac {x-x_1}  {x_2-x_1}(y_2-y_1), rand \in (x_1,x_2)$
+Then I applied the linear interpolation method to estimate passengers' boarding time $M$ :  $M(rand) = y_1 + \frac {x-x_1}  {x_2-x_1}(y_2-y_1), rand \in (x_1,x_2)$
 
 
-In order to eliminate the influence of the instability of the T calculation result caused by the random distribution of the passenger boarding time, we will simulate the situation that 8000 vehicles are waiting to pass through the parking area to carry passengers every time, simulate 1000 times, and the average $T$ obtained is of universal significance, and the results are as follows.
+To reduce the negative influence from the variety of T's calculation caused by models’ inherent uncertainties, I established the situation that 8000 vehicles are waiting to carry passengers, and simulated for 1000 times. The average $T$ obtained is of universal significance, and the results are as follows.
 
 <center>
 <img src="{{site.baseurl}}/assets/img/3q1.JPG"  /><br>
@@ -91,13 +92,16 @@ In order to eliminate the influence of the instability of the T calculation resu
 </center>
 
 
-Based on the above model, **we also introduce "jump-queue  coefficient" $a$ as a measure to give certain priority to some short-distance taxi drivers who return again, ensuring that the  "net income per unit time" of short-distance taxi drivers is equal to  the "net income per unit time" of non short-distance taxi drivers**, so as to make the income of these taxis as balanced as possible. 
+Based on the above model, to make the income between drivers as balanced as possible, I also **introduced a priority factor  $a$ allowing drivers with lower profits to jump the queue**, ensuring that the short-distance taxi driver's profit is equal to that of long-distance taxi driver. 
 
-Therefore, the queue jumping coefficient is determined by the mileage of short  distance passengers $X'$, the current number of taxi queuing $L$, the  current number of passengers waiting for boarding $p0$, and the time when  the driver goes to the queue $T$. In the end, **we bring in a group of conventional data, and fit the  relationship between jump-queue  coefficient $a$ and short distance passenger mileage $X'$. The fitting curve shows good performance and the rationality of  the model. **
+The priority factor should be determined by short-distance passengers' mileage $X'$, the number of taxi $L$, the number of passengers  $p0$, and the time when the driver goes back to the queue at airports  $T$. I added this factor into above model. **The  relationship between priority factor $a$ and passenger's mileage $X'$ is as follows.** 
+
 <center>
 <img src="{{site.baseurl}}/assets/img/fitting4.png "   width="35%" height="35%" /><br>
 <div style="color:orange; border-bottom: 1px solid #d9d9d9;
     display: inline-block;
     color: #999;
-    padding: 2px;">fitting curve between jump-queue  coefficient and short distance passenger mileage</div>
+    padding: 2px;">The relationship between priority factor and passenger's mileage.</div>
 </center>
+
+Overall, these simulation experienments of the model showed effeciency and rationality. And I am very proud that it has been used at Harbin Taiping International Airport. 
