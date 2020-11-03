@@ -56,9 +56,9 @@ To ensure the safety of vehicles and passengers, I **firstly established a schem
     padding: 2px;">a scheme of taxi entry and exit</div>
 </center>
 
-Under this scheme, I also discussed the influence of the number of taxis waiting for passengers at the same time in the parking area on the departure rate per unit time, and because of the instability of passengers' boarding time, the departure rate per unit time will also be affected. We have established **a mathematical model, considered the above factors, calculated the unit time drive out rate corresponding to different parking spaces, and comprehensively considered the actual factors such as management cost, and obtained an optimal scheme**, so that the driver's income will be increased, and the cost paid by the management department will not be wasted too much. In particular, we consider **the impact of uncertainty in the real situation**, which is a bright spot. At last, the load rate of each parking space and the feasible adjustment method are discussed.
+Under this scheme, I also calculated the traffic passing rate corresponding to different parking spaces and the actual occupation rate of each parking lot considering many actual factors, especially the queuing theory–based models’ inherent uncertainties to provide suggestions for parking spaces arrangement and the feasible adjustment methods.
 
-$T$ is the time from the time when all vehicles of the k-th enter the departure area to the time when all vehicles of the K+1-th enter the departure area.  In the process of derivation, I computed $T$ differently when the amount of parking spaces $2i$ is varied as follows.
+$T$ is the period from the time when all vehicles of the k-th enter the departure area to the time when all vehicles of the K+1-th enter the departure area.  In the process of derivation, I computed $T$ correpongingly when the amount of parking spaces $2i$ is varied as follows.
 
 <center>
 <img src="{{site.baseurl}}/assets/img/445.JPG" width="55%" height="55%" /><br>
@@ -84,11 +84,12 @@ For the queuing theory–based models’ inherent uncertainties, such as  the ra
 Then I applied the linear interpolation method to estimate passengers' boarding time $M$ :  $M(rand) = y_1 + \frac {x-x_1}  {x_2-x_1}(y_2-y_1), rand \in (x_1,x_2)$
 
 
-To reduce the negative influence from the variety of T's calculation caused by models’ inherent uncertainties, I established the situation that 8000 vehicles are waiting to carry passengers, and simulated for 1000 times. The average $T$ obtained is of universal significance, and the results are as follows.
+To reduce the negative influence from the variety of T's calculation caused by models’ inherent uncertainties, I established the situation that 8000 vehicles are waiting to carry passengers, and simulated for 1000 times. The final results are as follows.
 
 <center>
 <img src="{{site.baseurl}}/assets/img/3q1.JPG"  /><br>
 <img src="{{site.baseurl}}/assets/img/3q2.JPG"  /><br>
+<img src="{{site.baseurl}}/assets/img/occupation rate.JPG"  /><br>
 </center>
 
 
