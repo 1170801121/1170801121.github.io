@@ -35,16 +35,15 @@ The figure 2 and figure 3 used in paper are the simple illustration of measuring
 
 **Baseline**: To demonstrate the effectiveness of EM-RBR, we compare with a number of competitive baselines: TransE (Bordes et al., 2013), TransH (Wang et al., 2014), TransR (Lin et al., 2015), TransD (Ji et al., 2015), RUGE (Guo et al., 2017), ComplEx (Trouillon et al., 2016) and DistMult (Kadlec et al., 2017). All baselines are evaluated on FB15k-R. Besides, TransE, TransH, TransR and TransD are evaluated on FB15k and WN18 to prove that our framework is a real reinforced framework.
 
-EM-RBR integrated with TransE, TransH and TransR greatly improve the performance of the original methods on all metrics according to the results in Table 1. This implies that our reasoning-enhanced framework can efficiently help the knowledge graph embedding models to perform link prediction more accurately.
+Experimental Results are as shown in Table 1. When evaluating on FB15k and WN18, our model has improved all the metrics compared with the translation model in the baselines, especially MRR and Hits@1 on WN18. The higer Hits@n score indicates the greater possibilities to rank the the correct triplets in the front. These metrics paying attention on front ranks are the most important in real knowledge inference task. For example, **EM-RBR(D) improve Hits@1 on WN18 from 0.296} to 0.752 compared to transD**.
+
+As for FB15k-R, each triplet in this data set can match enough rules so that they can be optimized under EM-RBR. On this data set, the best MR is **1.73** from EM-RBR(R) which is an improvement of **24.93** relative to RotateE. The best MRR is **0.86** from EM-RBR(R) which is an improvement of **0.35** relative to ComplEx. The best Hits@1 is **0.7545** from EM-RBR(H) which is an improvement of **39.65** relative to ComplEx. The best Hits@10 is **0.992** from EM-RBR(R) which is an improvement of **20.2** relative to ComplEx.
 
 <center>
 <img src="{{site.baseurl}}/assets/img/expTable1.JPG" width="55%" height="55%" /><br>
 </center>
-Our rule-enhanced method **significantly reaches some promising absolute performance scores on Hits@1, Hits@3, and Hits@5 metrics**, e.g., in FB15k,  EM-RBR(H)'s improvements of $38.82 - 30.37 = 8.45$ in Hits@1, $61.13 - 55.53 = 5.60$ in Hits@3 and also obtains $68.28 - 64.09 = 4.19$ absolute improvement in Hits@5. These metrics paying attention on front ranks are the most important in real knowledge inference task. The higer Hits@n score indicates the greater possibilities to rank the the correct triplets in the front.
 
-**More impressively in FB15k-R, EM-RBR(E)'s, EM-RBR(H)'s and EM-RBR(R)'s advance in Hits@1 is $65.1 - 14.9 = 50.2$, $75.45 - 18.25 = 57.20$ and $74.30 - 7.65 = 66.65$ respectively.** Thus, EM-RBR can make knowledge graph embedding method capable of being used in the real and large scale knowledge inference tasks.
-
-The figure 4 and figure 5 used in paper are to show the **hyper-parameter analysis**. And Table 2 is a **case study to explore how much EM-RBR can optimize on each triplet on earth**. Both more elaborate description can be found in our paper.
+The figure 4 and figure 5 used in paper are to show the **hyper-parameter analysis**. And Table 2 is an **optimized case analysis**.
 <center>
 <img src="{{site.baseurl}}/assets/img/varAna.JPG" width="55%" height="55%" /><br>
 </center>
