@@ -1,5 +1,5 @@
 ---
-title: Effective unified index structure for multi-query on massive graph data (under distributed system)
+title: Unified index for effective multi-query on massive graph data (under distributed system)
 layout: post
 tags: 
 img: BFSBC.png
