@@ -1,5 +1,5 @@
 ---
-title: Research Proposal
+title: Research Proposal on Knowledge Graph Embedding
 layout: post
 img: figure.png
 categories: ''
