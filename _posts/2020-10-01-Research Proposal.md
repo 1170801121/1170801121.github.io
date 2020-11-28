@@ -5,13 +5,10 @@ img: figure.png
 categories: ''
 tags: ''
 ---
-## Biography
+
+Research Topic: Improving knowledge graph embedding using texts and rules 
 <center>
-<img src="{{site.baseurl}}/assets/img/volun.jpg" width="55%" height="55%" /><br>
-<div style="color:orange; border-bottom: 1px solid #d9d9d9;
-    display: inline-block;
-    color: #999;
-    padding: 2px;">Volunteer servicing Time Confirmation.</div><br>
+<img src="{{site.baseurl}}/assets/img/Research Proposal_Page1.png" width="55%" height="55%" /><br>
 </center>
 
 <center>
