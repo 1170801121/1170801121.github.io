@@ -5,7 +5,7 @@ img: figure.png
 categories: ''
 tags: ''
 ---
-Research Topic: Improving knowledge graph embedding using texts and rules 
+## Research Topic: Improving knowledge graph embedding using texts and rules 
 
 <center>
 <img src="{{site.baseurl}}/assets/img/Research Proposal_Page1.png"/><br>
