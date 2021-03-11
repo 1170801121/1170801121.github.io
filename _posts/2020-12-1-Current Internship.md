@@ -14,6 +14,7 @@ The group I belong to is to develop the software in the field of finance analysi
 
 * Extracted entities (such as companies, employees, and stocks) and events from various companies’ reports, announcements and other news, and conducted sentiment analysis for the extracted events 
 * Applied contrastive learning, distant supervision, and few-shot learning to mine relationships between the entities from context to enrich the knowledge base  
+* Used sentence-level attention model combined with multi-instance learning paradigm and entity descriptions to select valid instances from distant supervision 
 * Designed models to analyse the massive data to provide professional and intelligent predictions on the financial products such as stocks  
 * Created web pages with HTML, CSS, JavaScript using Flask framework for users 
 
